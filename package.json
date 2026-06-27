@@ -1,22 +1,36 @@
 {
-  "name": "webpack-ai-hmr-controller",
+  "name": "ai-hmr-guard",
   "version": "1.0.0",
-  "description": "A Webpack plugin to temporarily pause and resume HMR during AI code generation to prevent Out of Memory (OOM) crashes.",
+  "description": "Guard Webpack and Vite HMR during AI code generation to prevent excessive hot updates and OOM crashes.",
   "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./vite": "./vite.js"
+  },
   "bin": {
     "ai-hmr-pause": "./bin/pause.js",
     "ai-hmr-resume": "./bin/resume.js",
     "ai-hmr-status": "./bin/status.js"
   },
+  "files": [
+    "bin",
+    "index.js",
+    "vite.js",
+    "README.md"
+  ],
   "keywords": [
     "webpack",
+    "vite",
     "hmr",
+    "hot-reload",
     "vue",
+    "react",
     "cline",
+    "roo-code",
     "ai",
     "oom",
     "copilot"
   ],
-  "author": "您的名字",
+  "author": "Your Name",
   "license": "MIT"
 }
