@@ -5,7 +5,8 @@
   "main": "index.js",
   "bin": {
     "ai-hmr-pause": "./bin/pause.js",
-    "ai-hmr-resume": "./bin/resume.js"
+    "ai-hmr-resume": "./bin/resume.js",
+    "ai-hmr-status": "./bin/status.js"
   },
   "keywords": [
     "webpack",
@@ -16,6 +17,6 @@
     "oom",
     "copilot"
   ],
-  "author": "wwkissocool",
+  "author": "您的名字",
   "license": "MIT"
 }

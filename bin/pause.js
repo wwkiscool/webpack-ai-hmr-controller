@@ -2,13 +2,19 @@
 const fs = require('fs');
 const path = require('path');
 
-const lockFileName = '.hmr-lock';
+const lockFileName = process.env.AI_HMR_LOCK_FILE || '.hmr-lock';
 const lockPath = path.resolve(process.cwd(), lockFileName);
 
+const lockData = {
+  createdAt: Date.now(),
+  createdAtIso: new Date().toISOString(),
+  pid: process.pid
+};
+
 try {
-  fs.writeFileSync(lockPath, '');
-  console.log('⏸️  [AI-HMR] HMR 已成功暂停 (锁文件已创建).');
+  fs.writeFileSync(lockPath, `${JSON.stringify(lockData, null, 2)}\n`);
+  console.log(`[AI-HMR] HMR paused. Lock file created: ${lockFileName}`);
 } catch (err) {
-  console.error('❌ [AI-HMR] 暂停失败:', err.message);
+  console.error(`[AI-HMR] Failed to pause HMR: ${err.message}`);
   process.exitCode = 1;
 }
