@@ -1,0 +1,21 @@
+{
+  "name": "webpack-ai-hmr-controller",
+  "version": "1.0.0",
+  "description": "A Webpack plugin to temporarily pause and resume HMR during AI code generation to prevent Out of Memory (OOM) crashes.",
+  "main": "index.js",
+  "bin": {
+    "ai-hmr-pause": "./bin/pause.js",
+    "ai-hmr-resume": "./bin/resume.js"
+  },
+  "keywords": [
+    "webpack",
+    "hmr",
+    "vue",
+    "cline",
+    "ai",
+    "oom",
+    "copilot"
+  ],
+  "author": "wwkissocool",
+  "license": "MIT"
+}
