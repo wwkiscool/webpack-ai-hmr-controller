@@ -69,25 +69,4 @@ new AiHmrControllerPlugin({
 - 如果锁文件被删除，插件会继续执行编译。
 - `ai-hmr-resume` 会删除 `.hmr-lock` 锁文件，让 Webpack 恢复热更新。
 
-## 发布到 npm
 
-1. 注册 npm 账号：访问 [npmjs.com](https://www.npmjs.com/) 注册。
-2. 在包目录下登录：
-
-```bash
-npm login
-```
-
-3. 发布包：
-
-```bash
-npm publish
-```
-
-如果是 scoped package 或遇到访问权限问题，可以尝试：
-
-```bash
-npm publish --access public
-```
-
-发布成功后，其他开发者就可以通过 `npm install webpack-ai-hmr-controller` 直接安装使用。
